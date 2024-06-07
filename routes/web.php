@@ -22,6 +22,7 @@ Route::get('/dashboard', function () {
 // get data from MenuController and render it in the view using Inertia
 
 Route::inertia('/menu', 'Menu');
+Route::inertia('/somos-emkt', 'SomosEmkt');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
