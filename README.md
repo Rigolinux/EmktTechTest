@@ -32,3 +32,18 @@
  npm run dev
 ```
 
+8. Acceder a la url del servidor de php por defecto 
+```bash
+http://127.0.0.1:8000
+```
+Las rutas disponibles son:
+```bash
+http://127.0.0.1:8000/menu
+
+http://127.0.0.1:8000/somos-emkt
+
+```
+
+
+
+
