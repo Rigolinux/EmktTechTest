@@ -2,6 +2,8 @@
 import { Head, Link } from '@inertiajs/vue3';
 import IndexLayout from '../Layouts/IndexLayout.vue';
 import CustomSlider from '../Components/CustomSlider.vue';
+import CustomGrid from '../Components/CustomGrid.vue';
+import CustomForm from '../Components/CustomForm.vue';
 
 
 
@@ -12,11 +14,19 @@ import CustomSlider from '../Components/CustomSlider.vue';
     <IndexLayout>
 
         <section id="Home">
-            <h1> Bienvenido </h1>
 
-            <div>
-                <CustomSlider ></CustomSlider>
+
+            <div class="container">
+                <div class="mt-5">
+                    <CustomSlider />
+                </div>
+                <div class="mt-5">
+                    <CustomGrid />
+                </div>
+                <div class="mt-5">
+                    <CustomForm />
+                </div>
             </div>
-            </section>
+        </section>
     </IndexLayout>
-</template>../Components/Slider.vue
+</template>
