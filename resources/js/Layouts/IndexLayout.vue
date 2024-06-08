@@ -38,7 +38,7 @@ import { mdiFacebook,mdiTwitter, mdiInstagram,mdiLinkedin } from '@mdi/js';
               <a href="#!" class="text-dark">Email: info@example.com</a>
             </li>
             <li>
-              <a href="#!" class="text-dark">Phone: +503 1234 5678</a>
+              <a href="#!" class="text-dark">Telefono: +503 1234 5678</a>
             </li>
           </ul>
         </div>
