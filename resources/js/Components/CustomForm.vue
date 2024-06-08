@@ -1,5 +1,6 @@
 <script setup>
 import { getSkills } from '@/api/skill';
+import { addDeveloper } from '@/api/developer';
 import { validate } from '@/helpers/FormValidator';
 import { ref, onMounted } from 'vue';
 
@@ -16,7 +17,7 @@ const age = ref('');
 const email = ref('');
 const selectedSkill = ref('');
 
-const submitForm = () => {
+const submitForm = async() => {
 
 
 
@@ -33,7 +34,14 @@ const submitForm = () => {
 
   console.log(formData);
     if(validate(formData)){
-        console.log('Formulario valido');
+        try{
+            await addDeveloper(formData);
+            alert('Desarrollador agregado correctamente');
+        }
+        catch(e){
+            alert('Error al agregar desarrollador');
+        }
+      
     }else{
         console.log('Formulario invalido');
     }
@@ -59,7 +67,7 @@ const submitForm = () => {
         <div class="mb-3">
           <label for="email" class="form-label">Correo Electronico</label>
           <input type="email" class="form-control" id="email" v-model="email" required>
-          
+
         </div>
         <div class="mb-3">
           <label for="skill" class="form-label">Habilidad</label>
