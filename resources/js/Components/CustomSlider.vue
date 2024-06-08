@@ -2,32 +2,15 @@
 import { ref } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import demodata from '@/utils/data.js'
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-import img1 from '@/assets/imgs/1.jpg';
-import img2 from '@/assets/imgs/2.jpg';
-import img3 from '@/assets/imgs/3.jpg';
 
-const slides = ref([
-  {
-    name: 'Bosque',
-    image: img1,
-    descripcion: 'Descripcion del bosque'
-  },
-  {
-    name: 'Montaña',
-    image: img2,
-    descripcion: 'Descripcion de la montaña'
-  },
-  {
-    name: 'Playa',
-    image: img3,
-    descripcion: 'Descripcion de la playa'
-  }
-]);
+
+const slides = ref(demodata);
 
 const modules = [Navigation, Pagination, Scrollbar, A11y];
 </script>
@@ -54,10 +37,7 @@ const modules = [Navigation, Pagination, Scrollbar, A11y];
 </template>
 
 <style scoped>
-.swiper-container {
-  width: 500px;
-  height: 500px;
-}
+
 
 .slide-content {
   display: flex;
@@ -68,14 +48,5 @@ const modules = [Navigation, Pagination, Scrollbar, A11y];
   height: 100%;
 }
 
-.slide-image {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-}
 
-.slide-title {
-  color: white;
-  margin-top: 10px;
-}
 </style>
